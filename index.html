@@ -22,7 +22,7 @@
 
     #player {
       color: var(--hexipro-green);
-      margin-right: 10px;
+      /* margin-right: 10px; */
     }
 
     #stage {
@@ -33,11 +33,14 @@
       color: var(--hexipro-violet)
     }
 
-    #info {}
-
     #info-left {
       float: left;
       text-align: left;
+      border-style: solid;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: var(--hexipro-green);
     }
 
     #info-right {
@@ -67,6 +70,7 @@
         <button class="end-turn control" id="endTurn">End Turn</button>
       </div>
     </div>
+
     <canvas id="canvas" width="1000" height="700"></canvas>
 
   </div>
