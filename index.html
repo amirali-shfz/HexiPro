@@ -82,7 +82,7 @@
       constructor() {
 
         // turn info
-        this.players = ['Donald Duck', 'Robert D Jr.'];
+        this.players = ['A', 'B'];
         this.stages = ['attack', 'allocate'];
 
         // general game state
@@ -115,7 +115,7 @@
       start = () => {
         this.board.build();
         this.board.animate();
-        this.updateCurrentPlayer('Donald Duck');
+        this.updateCurrentPlayer('A');
         this.startAttackStage();
       };
 
@@ -125,7 +125,7 @@
 
       gameReset = () => { };
       getNextPlayer = () => {
-        return (this.currentPlayer === 'Donald Duck') ? 'Robert D Jr.' : 'Donald Duck';
+        return (this.currentPlayer === 'A') ? 'B' : 'A';
       };
 
       startAllocateStage = () => {
@@ -584,10 +584,10 @@
         let playerLineColor = palette.dark_gray;
         let playerFillColor = palette.background;
 
-        if (player === 'Donald Duck') {
+        if (player === 'A') {
           playerLineColor = palette.light_teal;
           playerFillColor = palette.light_teal;
-        } else if (player === 'Robert D Jr.') {
+        } else if (player === 'B') {
           playerLineColor = palette.dark_teal;
           playerFillColor = palette.dark_teal;
         }
