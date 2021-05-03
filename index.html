@@ -22,6 +22,7 @@
 
     #player {
       color: var(--hexipro-green);
+      margin-right: 10px;
     }
 
     #stage {
@@ -83,7 +84,7 @@
 
         // turn info
         this.players = ['A', 'B'];
-        this.stages = ['attack', 'allocate'];
+        this.stages = ['Attack', 'Scheme'];
 
         // general game state
         this.gameOver = false;
@@ -92,10 +93,10 @@
         this.currentPlayer = null;
         this.currentStage = null;
 
-        // allocate stage state
+        // scheme stage state
         this.availablePower = 0;
 
-        // attack state state
+        // Attack state state
         this.currentAttackNodeSelected = false;
         this.currentAttackNodeColumn = null;
         this.currentAttackNodeRow = null;
@@ -130,7 +131,7 @@
 
       startAllocateStage = () => {
 
-        // clean up attack state
+        // clean up Attack state
         this.resetAttackTile(); /* PENDING */
 
         // calculate new availablePower
@@ -146,8 +147,8 @@
 
         // this.availablePower = tempAvailablePower;
         this.updateAvailablePower(tempAvailablePower);
-        // this.currentStage = 'allocate';
-        this.updateCurrentStage('allocate');
+        // this.currentStage = 'Scheme';
+        this.updateCurrentStage('Scheme');
 
         // enable End Turn button
         $('#endTurn').prop('disabled', false);
@@ -155,13 +156,13 @@
 
       startAttackStage = () => {
 
-        // reset attack state
+        // reset Attack state
         this.updateAvailablePower(0);
-        this.updateCurrentStage('attack');
+        this.updateCurrentStage('Attack');
 
         // experimental feature (not found in influence!)
         // automatically detect when there's no more possible 
-        // moves and auto-end attack phase
+        // moves and auto-end Attack phase
         /*if (!this.isAttackAvailable()) {
           this.endAttack();
         }*/
@@ -188,8 +189,8 @@
 
       onSameTeamTileClick = (col, row, power) => {
 
-        if (this.currentStage === 'allocate') {
-          // allocate selection
+        if (this.currentStage === 'Scheme') {
+          // Scheme selection
           if (this.availablePower > 0) {
             this.board.gameTiles[col][row].power += 1;
 
@@ -207,7 +208,7 @@
 
 
         } else {
-          // attack selection
+          // Attack selection
 
           if (this.currentAttackNodeColumn === col && this.currentAttackNodeRow === row) {
             this.resetAttackTile();
@@ -225,7 +226,7 @@
       onEnemyTeamTileClick = (col, row, power) => {
         console.log('enemy tile click');
 
-        if (this.currentStage === 'attack' && this.currentAttackNodeSelected) {
+        if (this.currentStage === 'Attack' && this.currentAttackNodeSelected) {
           if (this.adjacentTilesCoordinates(this.currentAttackNodeColumn, this.currentAttackNodeRow, col, row)) {
             this.attackTile(this.currentAttackNodeColumn, this.currentAttackNodeRow, col, row);
           }
@@ -348,7 +349,7 @@
       };
 
       isAttackAvailable = () => {
-        // calculate remaining attack tiles
+        // calculate remaining Attack tiles
         let validAttackTiles = [];
 
         this.board.gameTiles.forEach(col => {
@@ -425,7 +426,7 @@
       resetGame = () => { };
 
       endAttack = () => {
-        // alert('attack ended');
+        // alert('Attack ended');
         this.isEndAttackButtonDisabled = true;
         this.startAllocateStage();
       };
