@@ -7,7 +7,8 @@ const palette = {
   dark_teal: '#005151',
   light_teal: '#30CEBB',
   white: '#FFFFFF',
-  dark_gray: '#53565A'
+  dark_gray: '#53565A',
+  peach: '#ff9966'
 };
 
 const HexSize = 50;

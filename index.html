@@ -15,6 +15,9 @@
     }
 
     #canvas {
+      /* float: right; */
+      margin-left: auto;
+      margin-right: auto;
       background-color: #0d0d0d;
       border: 0;
       border-radius: 10px;
@@ -40,15 +43,22 @@
       padding: 10px;
       padding-left: 20px;
       padding-right: 20px;
+      margin-top: 8px;
       color: var(--hexipro-green);
     }
 
-    #info-right {
-      float: right;
+    #info-text {
+      color: ivory;
+    }
+
+
+    #all-info {
+      /* float: left; */
+      /* border-right: ivory; */
     }
 
     #controls {
-      text-align: center;
+      text-align: right;
     }
   </style>
 </head>
@@ -57,18 +67,24 @@
   <h1>Hexipro</h1>
   <hr class="rainbow-divider">
   <div id="hexipro">
-    <div id="info-left">
-      <p>
-        Player: <span id="player">PLAYER</span><br>
-        Stage: <span id="stage">STAGE</span><br>
-        Power: <span id="power">POWER</span>
-      </p>
-    </div>
-    <div id="info-right">
+
+    <div id="all-info">
+      <div id="info-left">
+        <p id="info-text">
+          Player: <span id="player">PLAYER</span><br>
+          Stage: <span id="stage">STAGE</span><br>
+          Power: <span id="power">POWER</span>
+        </p>
+      </div>
+
       <div id="controls">
         <button class="end-attack control" id="endAttack">End Attack</button>
+      </div>
+      <div id="controls">
         <button class="end-turn control" id="endTurn">End Turn</button>
       </div>
+
+      <hr class="rainbow-divider">
     </div>
 
     <canvas id="canvas" width="1000" height="700"></canvas>
@@ -451,6 +467,13 @@
       updateCurrentPlayer = (newPlayer) => {
         this.currentPlayer = newPlayer;
         $('#player').text(newPlayer);
+        if (newPlayer === 'A') {
+          $('#player').css('color', '#26c99e');
+          $('#info-left').css('color', '#26c99e');
+        } else {
+          $('#player').css('color', '#ff9966');
+          $('#info-left').css('color', '#ff9966');
+        }
       };
 
       updateCurrentStage = (newStage) => {
@@ -593,8 +616,8 @@
           playerLineColor = palette.light_teal;
           playerFillColor = palette.light_teal;
         } else if (player === 'B') {
-          playerLineColor = palette.dark_teal;
-          playerFillColor = palette.dark_teal;
+          playerLineColor = palette.peach;
+          playerFillColor = palette.peach;
         }
 
         if (this.attacking) {
