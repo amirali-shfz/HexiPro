@@ -82,7 +82,7 @@
       constructor() {
 
         // turn info
-        this.players = ['Donald Duck', 'Robert Downey Jr.'];
+        this.players = ['Donald Duck', 'Robert D Jr.'];
         this.stages = ['attack', 'allocate'];
 
         // general game state
@@ -125,7 +125,7 @@
 
       gameReset = () => { };
       getNextPlayer = () => {
-        return (this.currentPlayer === 'Donald Duck') ? 'Robert Downey Jr.' : 'Donald Duck';
+        return (this.currentPlayer === 'Donald Duck') ? 'Robert D Jr.' : 'Donald Duck';
       };
 
       startAllocateStage = () => {
@@ -587,7 +587,7 @@
         if (player === 'Donald Duck') {
           playerLineColor = palette.light_teal;
           playerFillColor = palette.light_teal;
-        } else if (player === 'Robert Downey Jr.') {
+        } else if (player === 'Robert D Jr.') {
           playerLineColor = palette.dark_teal;
           playerFillColor = palette.dark_teal;
         }
