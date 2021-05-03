@@ -15,7 +15,7 @@ const HexColumns = 12;
 const HexRows = 7;
 const HexSetup = [
   [
-    { player: 'A', power: 2, active: true },
+    { player: 'Donald Duck', power: 2, active: true },
     { player: null, power: 0, active: true },
     { player: null, power: 0, active: true },
     { player: null, power: 0, active: true },
@@ -120,7 +120,7 @@ const HexSetup = [
     { player: null, power: 0, active: true },
     { player: null, power: 0, active: true },
     { player: null, power: 0, active: true },
-    { player: 'B', power: 2, active: true }
+    { player: 'Robert Downey Jr.', power: 2, active: true }
   ]
 ];
 
