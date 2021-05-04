@@ -1,6 +1,6 @@
-# Hexipro
+# HexiPro
 
-A fun and exciting way to experience the board game Risk! This multiplayer hexagonal board game is inspired by risk, play and see if you can take over the hexagonal world. Click here to play version one.
+A fun and exciting way to experience the board game Risk! This multiplayer hexagonal board game is inspired by risk, play and see if you can take over the hexagonal world. [Click here to play version one](https://guarded-springs-60488.herokuapp.com/).
 
 ## Here are the rules:
 
@@ -20,8 +20,8 @@ And that is about it. Go have fun and tell me if you have any questions :)
 
 ## Future Improvements
 
-There currently is no Game Over mechanism. This is in the works and will soon be a part of the game. For now, if one player has no more tiles on the board, then the other player has won.
+- There currently is no Game Over mechanism. This is in the works and will soon be a part of the game. For now, if one player has no more tiles on the board, then the other player has won.
 
-Another future improvement is allowing the players to pick their own names and colors.
+- Another future improvement is allowing the players to pick their own names and colors.
 
 Thanks for playing!
