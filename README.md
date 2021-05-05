@@ -9,7 +9,7 @@ A fun and exciting way to experience the board game Risk! This multiplayer hexag
 3. Once you are done attacking, click "END ATTACK". In the Scheme stage, you are scheming against the enemy. You are given X troops to allocate to one of the tiles that you've captured. This number is shown in the top left by "Power". Your Power increases with the more tiles you capture.
 4. After you are done allocating troops, click "END TURN" to give control back to your enemy!
 
-## Attacking Mechanism
+## Attacking Mechanism:
 
 1. You can only attack an enemy tile that shares a border with the tile you want to attack from.
 2. Every tile needs to have at least 1 troop on it, this means that you can only attack from a tile with more than one troop on it.
@@ -18,7 +18,7 @@ A fun and exciting way to experience the board game Risk! This multiplayer hexag
 
 And that is about it. Go have fun and tell me if you have any questions :)
 
-## Future Improvements
+## Future Improvements:
 
 - There currently is no Game Over mechanism. This is in the works and will soon be a part of the game. For now, if one player has no more tiles on the board, then the other player has won.
 
